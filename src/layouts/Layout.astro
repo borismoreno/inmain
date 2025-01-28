@@ -1,3 +1,10 @@
+---
+interface Props {
+    title?: string;
+}
+const { title = "Inmain" } = Astro.props;
+---
+
 <!doctype html>
 <html lang="es">
     <head>
@@ -5,7 +12,7 @@
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/forklift-truck.svg" />
         <meta name="generator" content={Astro.generator} />
-        <title>Inmain</title>
+        <title>{title}</title>
     </head>
     <body>
         <slot />
